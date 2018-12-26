@@ -1,0 +1,31 @@
+div {
+ width:300px; height:300px;
+ border:1px solid gray;
+ font-size:0.7em;
+}
+
+div > div {
+ background-color:lightgrey;
+ width:300px; height:100px;
+ border: 11px solid green;
+ padding : 0px 0px 0px 0px;
+ margin:10px;
+ box-shadow: 10px 10px 5px -1px #f0f;
+ box-sizing : border-box;
+}
+
+.blue {
+ background-color:blue;
+}
+
+.green {
+ float:left;
+ background-color:green;
+ margin-left:40px;
+}
+
+.red {
+ background-color:red;
+ 1position:relative;
+ 1left:0px;
+}
