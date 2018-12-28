@@ -1,0 +1,56 @@
+
+
+.right > h2 {
+  position:relative;
+}
+
+.right .emoticon {
+  position : absolute;
+  top:0px;
+  right:35%;
+}
+
+div {
+  border :1px solid gray;
+}
+
+header {
+  background-color :#eee;
+}
+#wrap {
+  background-color : #ccc;
+  overflow:auto;
+  margin-top : 20px;
+  margin-bottom : 0px;
+}
+li {
+  list-style:none;
+}
+
+footer {
+  background-color : #eee;
+  clear :left;
+}
+
+.left{
+  background-color : #16a;
+  width : 17%;
+  float:left;
+  margin-right:3%;
+  height : 200px;
+}
+.right {
+  background-color : #29a;
+  width : 59%;
+  text-align:center;
+  float:left;
+  margin-right:3%;
+  height : 200px;
+}
+.realright {
+  float : left;
+  height :200px;
+  width : 17%;
+  margin-left=3%;
+  background-color:#227;
+}
