@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+
+<style>
+li{
+  list-style:none;
+  font-size:1.4em;
+  margin-bottom:10px;
+}
+.red{
+  color:#f00;
+}
+
+.blue{
+  color:#00f;
+}
+
+.green{
+  color:#0f0;
+}
+</style>
+
+</head>
+
+<body>
+  <h1>selector test</h1>
+  
+    
+<section>
+  <h2> red section </h2>
+  <ul>
+    <li class="red">apple</li>
+    <li class="red">orange</li>
+    <li>banana</li>
+    <li>grape</li>
+    <li>strawberry</li>
+  </ul>
+</section>
+  
+  <Br>
+  
+<section>
+  <h2> blue section </h2>
+  <ul>
+    <li class="green blue">apple</li>
+    <li class="red">orange</li>
+    <li>banana</li>
+    <li>grape</li>
+    <li>strawberry</li>
+  </ul>
+</section>
+
+<script>
+///// section태그의 자손 중 blue라는 클래스를 가지고 있는 노드가 있다면,
+////// 그 하위에 있는 h2노드를 삭제하라.
+
+    var bluenode = document.querySelectorAll("section .blue");
+    console.log(bluenode[0].parentElement.tagName);
+    console.log(bluenode[0].parentElement.parentElement.tagName);
+    
+    var section = bluenode[0].parentElement.parentElement;
+
+    var h2 = section.querySelector("h2");
+
+    h2.remove();
+
+</script>
+
+
+</body>
+</html>

@@ -34,7 +34,7 @@ a.onreadystatechange = function(){
     } else {
         // 대기중
     }
-}
+
 /** readyState의 정보
  * 0 : Request객체 생성 완료
  * 1 : connection open한 상태

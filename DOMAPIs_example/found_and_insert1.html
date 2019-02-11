@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS Bin</title>
+ 
+<style>
+
+li{
+    list-style:none;
+    font-size:1.4em;
+    margin-bottom:10px;
+}
+
+.red{
+    color:#f00;
+}
+
+</style>
+
+</head>
+
+
+<body>
+  <h1>selector test</h1>
+  
+  <ul>
+    <li class="red">apple</li>
+    <li class="red">orange</li>
+    <li>banana</li>
+    <li>grape</li>
+    <li>strawberry</li>
+  </ul>
+  <script>
+///// strawberry 밑에 mango 삽입//////////////////////////////////
+    var li = document.createElement("li");
+    var str = document.createTextNode("mango");
+    li.appendChild(str)
+    
+    var list = document.getElementsByTagName("LI");
+    
+    for(i=0;i<list.length;i++){
+      if(list[i].innerText=="strawberry"){
+        list[i].insertAdjacentElement("afterend",li);
+        break;
+        }
+    }
+
+    for(i=0;i<list.length;i++){
+      if(list[i].innerText=="mango"){
+        list[i].remove();
+        break; 
+        }
+    }
+
+///// 오랜지와 바나나 사이에 체리 삽입///////////////////////////////
+
+    var li2=document.createElement("li");
+    var str2=document.createTextNode("cherry");
+    li2.appendChild(str2);
+
+    var li3=document.createElement("li");
+    var str3=document.createTextNode("potato");
+    li3.appendChild(str3);
+
+
+    var list2 = document.getElementsByTagName("ul")[0];
+
+    list2.insertBefore(li2, list2.childNodes[5]);
+    list2.childNodes[5].insertAdjacentElement("beforebegin",li3);
+
+    console.log(list2);
+    console.log(list2.childNodes.length);
+
+///// apple을 grape와 strawberry 사이로 옮기시오.
+
+    var list4 = document.getElementsByTagName("li");
+    var apple;
+
+    for(i=0;i<list.length;i++){
+      if(list4[i].innerText=="apple"){
+        apple=list4[i];
+        list4[i].remove();
+        break;
+        }
+    }
+
+    for(i=0;i<list.length;i++){
+      if(list4[i].innerText=="strawberry"){
+        list4[i].insertAdjacentElement("beforebegin", apple);
+        break;
+        }
+    }
+    // insertBefore는 대상을 copy하는게 아닌 move하는 것이기 때문에
+    // 이 예제에서 insertBefore를 사용하였다면 복사한다음 기존의 것을 삭제하는 작업이 필요없다.
+
+
+
+///// class가 red인 li만 삭제하기///////////////////////////////
+
+    var list5 = document.getElementsByClassName("red");
+
+    for(i=0;i<list5.length;i++){
+        list5[i].remove();
+    }
+
+    </script>
+</body>
+</html>
