@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .content > li {
+        border:1px solid gray;
+        list-style:none;
+    }
+    </style>
+
+</head>
+<body>
+    
+    <h2>template test example</h2>
+    <ul class="content"></ul>
+    
+</body>
+    <!-- type이 javascript가 아닌 script는 스킵된다 -->
+    <script id = "template-list-item" type="text/template">
+        <li>
+            <h4>{title}</h4><p>{content}</p><div>{price}</div>
+        </li>
+    </script>
+
+
+    <script>
+        var data = [
+            {title : "hello", content :"world!", price:2000},
+            {title : "pang", content :"sorry", price:2550}   
+        ];
+
+        var html = document.querySelector("#template-list-item").innerHTML;
+        var resultHTML = "";
+        for(var i=0,len=data.length;i<len;i++){
+            resultHTML += html.replace("{title}", data[i].title)
+                                .replace("{content}", data[i].content)
+                                .replace("{price}",data[i].price);
+        }
+
+        document.querySelector(".content").innerHTML = resultHTML;
+    </script>
+</html>

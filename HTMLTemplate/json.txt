@@ -1,0 +1,22 @@
+[
+    {
+        "name":"applepie",
+        "level": ["sweet", 4]
+    },
+    {
+        "name":"biscuit",
+        "level": ["sweet", 1]
+    },
+    {
+        "name":"cake",
+        "level": ["sweet", 5]
+    },
+    {
+        "name":"cue cream",
+        "level": ["sweet", 5]
+    },
+    {
+        "name":"egg tart",
+        "level": ["sweet", 3]
+    }
+]

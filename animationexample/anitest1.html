@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+    
+    .ani1 {
+        position:relative;
+        background-color:blueviolet;
+        width:100px;
+        font-size:0.8em;
+        color:white;
+        top:100px;
+        transform:scale(1);
+        transition:all 2s;
+    }
+
+
+    HTML SCSS 
+
+    Result 
+
+EDIT ON
+
+.container {
+  margin: 100px;
+}
+.container:hover  {
+    transform: translateX(200px);
+  }
+
+.circle {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  margin: 10px; 
+  
+}
+
+.circle0 {
+  background: PaleTurquoise;
+  transition: all 1.5s linear;
+} 
+
+.circle1 {
+  background: salmon;
+  transition: all 1.5s ease;
+}
+
+.circle2 {
+  background: lightskyblue;
+  transition: all 1.5s ease-in;
+}
+
+.circle3 {
+  background: khaki;
+  transition: all 1.5s ease-out;
+}
+
+.circle4 {
+  background: mediumturquoise;
+  transition: all 1.5s ease-in-out;
+}
+
+.circle5 {
+  background: thistle;
+  transition: all 1.5s cubic-bezier(0,1,.98,0); 
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="ani1" style="left:100px"> hello world!</div> <br>
+    <button> right!</button>
+
+    
+
+<div class="container">
+    <div class="circle0 circle" style="left:100px"></div>
+    <div class="circle1 circle" style="left:100px"></div>
+    <div class="circle2 circle" style="left:100px"></div>
+    <div class="circle3 circle" style="left:100px"></div>
+    <div class="circle4 circle" style="left:100px"></div>
+    <div class="circle5 circle" style="left:100px"></div>
+  </div>
+  
+
+  
+</body>
+    <script>
+    var target = document.querySelector(".ani1");
+    var btn = document.querySelector("button");
+
+    var circle0 = document.querySelectorAll(".circle")[0];
+    var circle1 = document.querySelectorAll(".circle")[1];
+    var circle2 = document.querySelectorAll(".circle")[2];
+    var circle3 = document.querySelectorAll(".circle")[3];
+    var circle4 = document.querySelectorAll(".circle")[4];
+    var circle5 = document.querySelectorAll(".circle")[5];
+
+    btn.addEventListener("click", function(){
+        var pre = parseInt(target.style.left);
+        var cirleft = parseInt(circle0.style.left);
+        target.style.left = pre+ 10+"px";
+        circle0.style.left = cirleft- 50+"px";
+        circle1.style.left = cirleft- 50+"px";
+        circle2.style.left = cirleft- 50+"px";
+        circle3.style.left = cirleft- 50+"px";
+        circle4.style.left = cirleft- 50+"px";
+        circle5.style.left = cirleft- 50+"px";
+
+
+    });
+
+
+    </script>
+</html>
